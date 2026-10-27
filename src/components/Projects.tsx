@@ -6,7 +6,7 @@ const Projects: React.FC = () => {
     {
       title: 'CRM System',
       description:
-        'A business-focused Customer Relationship Management system for managing leads, sales pipelines, opportunities, contacts, companies, and business workflows. Developed full-stack features with React and .NET, following a modular backend architecture.',
+        'A full-stack Customer Relationship Management system for managing leads, sales pipelines, opportunities, contacts, companies, and business workflows. Developed using React, .NET, and SQL Server with a modular backend architecture.',
       technologies: [
         'React',
         'TypeScript',
@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
     {
       title: 'Donation Management System',
       description:
-        'A donation management platform designed to connect donors, families in need, field agents, and administrators. Supports donation workflows, donor management, verification, and payment-related operations through a React frontend and .NET backend.',
+        'A full-stack donation management platform connecting donors, families in need, field agents, and administrators. Supports donation workflows, donor management, verification, and payment-related operations using React and .NET.',
       technologies: [
         'React',
         'TypeScript',
@@ -57,67 +57,10 @@ const Projects: React.FC = () => {
         'Backend API development and relational database management',
       ],
     },
-    {
-      title: 'i-travel',
-      description:
-        'MCA final-year academic project: a travel management system designed to support trip planning, bookings, and travel-related activities.',
-      technologies: ['React', 'PHP', 'MySQL'],
-      status: 'In Development',
-      type: 'Academic Project',
-      features: [
-        'Trip planning and management',
-        'Booking system integration',
-        'User authentication and profiles',
-        'Responsive user interface',
-      ],
-    },
-    {
-      title: 'Online Test Portal',
-      description:
-        'An online examination portal with student, faculty, and administrator roles for creating, conducting, and managing tests.',
-      technologies: ['React', 'PHP', 'SQL'],
-      status: 'Current Project',
-      type: 'Academic Project',
-      features: [
-        'Multi-role user system',
-        'Secure authentication',
-        'Dynamic test generation',
-        'Test management',
-        'Result analytics and reporting',
-      ],
-    },
-    {
-      title: 'Laboratory Management System',
-      description:
-        'A laboratory management application designed to simplify vaccination slot booking and laboratory test appointments.',
-      technologies: [
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'Bootstrap',
-        'PHP',
-        'MySQL',
-      ],
-      status: 'Completed',
-      type: 'Academic Project',
-      features: [
-        'Vaccination slot booking',
-        'Laboratory test appointment scheduling',
-        'Crowd-free appointment management',
-        'User-friendly booking interface',
-        'Admin panel for slot management',
-      ],
-    },
   ];
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'Completed':
-        return 'bg-green-100 text-green-800';
-      case 'In Development':
-        return 'bg-blue-100 text-blue-800';
-      case 'Current Project':
-        return 'bg-yellow-100 text-yellow-800';
       case 'Professional Project':
         return 'bg-purple-100 text-purple-800';
       default:
@@ -130,16 +73,18 @@ const Projects: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Projects & Experience
+            Professional Projects
           </h2>
+
           <p className="text-gray-600 max-w-2xl mx-auto mb-6">
-            Full-stack development experience building business applications
-            with React, .NET, SQL Server, and modular backend architectures.
+            Full-stack development projects involving React, .NET,
+            SQL Server, RESTful APIs, and backend architecture.
           </p>
+
           <div className="w-20 h-1 bg-blue-600 mx-auto" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div
               key={project.title}
@@ -188,7 +133,8 @@ const Projects: React.FC = () => {
                         key={feature}
                         className="flex items-start gap-2"
                       >
-                        <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 shrink-0" />
+                        <span className="w-1.5 h-1.5 bg-blue-600
+                                         rounded-full mt-2 shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -213,15 +159,10 @@ const Projects: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex gap-3 pt-4 border-t border-gray-100">
-                  <span
-                    className="flex-1 flex items-center justify-center gap-2
-                               px-4 py-2 bg-gray-100 text-gray-600 rounded-lg
-                               text-sm"
-                  >
-                    <Code className="w-4 h-4" />
-                    Project Overview
-                  </span>
+                <div className="flex items-center gap-2 pt-4
+                                border-t border-gray-100 text-gray-500">
+                  <Code className="w-4 h-4" />
+                  <span className="text-sm">Project Overview</span>
                 </div>
               </div>
             </div>
